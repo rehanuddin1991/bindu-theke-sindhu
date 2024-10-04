@@ -1,7 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link, Navigate } from 'react-router-dom'
+import { authContext } from '../../Provider/AuthProvider'
+ 
+
 
 const Navbar = () => {
+    const { user, mySignOut } = useContext(authContext)
+    const handleSignout = () => {
+        mySignOut()
+        Navigate("/login")
+    }
     return (
         <div>
             <header className='container'>
@@ -27,23 +35,35 @@ const Navbar = () => {
                                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                                 <Link to="/" className="btn">Home</Link>
                                 <Link to="/course" className="btn">Course</Link>
-                                
+
                             </ul>
                         </div>
                         <Link to="/" className="btn btn-ghost text-xl">Bindu Theke Sindhu</Link>
                     </div>
                     <div className="navbar-center  hidden lg:flex">
                         <ul className="menu menu-horizontal px-2">
-                        <Link to="/" className="btn btn-active btn-primary">Home</Link>&nbsp;&nbsp;
-                        <Link to="/course" className="btn btn-accent">Course</Link>
-                             
-                            
+                            <Link to="/" className="btn btn-active btn-primary">Home</Link>&nbsp;&nbsp;
+                            <Link to="/course" className="btn btn-accent">Course</Link>
+
+
                         </ul>
                     </div>
-                    <div className="navbar-end   lg:flex px-3 ">
-                        <Link to="/login" className="text-white w-24 font-bold btn btn-info">Login</Link> &nbsp;
-                        <Link to="/register" className="btn w-24 text-white font-bold btn-success">Register</Link>
-                    </div>
+                    {
+                        user ? (<div className="navbar-end   lg:flex px-3 ">
+
+                            <Link onClick={handleSignout} className="text-white w-24 font-bold btn btn-info">{user.email} Logout</Link> &nbsp;
+                            <Link to="/register" className="btn w-24 text-white font-bold btn-success">Register</Link>
+                        </div>) :
+
+                           (  <div className="navbar-end   lg:flex px-3 ">
+
+                                <Link to="/login" className="text-white w-24 font-bold btn btn-info">Login</Link> &nbsp;
+                                <Link to="/register" className="btn w-24 text-white font-bold btn-success">Register</Link>
+                            </div>
+                           )
+
+
+                    }
                 </div>
             </header>
         </div>
