@@ -5,16 +5,17 @@ const SingleCourseComponents = ({ props }) => {
     const { title,author,course_id,details,img_url,price } = props;
     return (
          
-            <div className="relative mt-2 mb-2 min-h-[500px] card bg-neutral text-neutral-content w-80">
+            <div className="relative mt-2 mb-2 sm:min-h-[624px] md:min-h-[624px] lg:min-h-[624px] card bg-neutral text-neutral-content 
+            w-64 md:w-80 lg:w-80 sm:w-80 ">
 
-                <figure className="px-10 pt-10">
+                <figure className="px-1 pt-1">
                     <img
                         src={img_url}
-                        alt="Shoes"
-                        className="rounded-xl" />
+                        alt="course"
+                        className="rounded-xl " />
                 </figure>
-                <div className="card-body">
-                    <h2 className=" card-title">{title} </h2>
+                <div className="card-body text-left  ">
+                    <h2 className=" card-title">{title }... </h2>
                     <p>{details.slice(0,90)}..</p>
                     <h2 className="card-title">${price}</h2>
                     <div className="card-actions justify-end">

@@ -3,7 +3,7 @@ import { FaCheck } from "react-icons/fa";
 
 const HowWorksSection = () => {
     return (
-        <div className='container  ml-6 text-2xl  mt-6  text-justify'>
+        <div className='  ml-1 text-2xl  mt-6  text-justify p-1 mx-auto'>
             <h1 className='text-[chartreuse]'> Our Ongoing Programs</h1>
             <div className='mt-2 space-y-3'>
                 <h1 > 1) 1 Year Robotics Course</h1>

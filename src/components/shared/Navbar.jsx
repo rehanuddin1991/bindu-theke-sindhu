@@ -1,77 +1,95 @@
 import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { authContext } from '../../Provider/AuthProvider'
- 
+
 
 
 const Navbar = () => {
-    const navigate=useNavigate()
-    const { user,setUser, mySignOut } = useContext(authContext)
+    const navigate = useNavigate()
+    const { user, setUser, mySignOut } = useContext(authContext)
     const handleSignout = () => {
-         
+
         mySignOut().then(
-            (res)=> {      navigate("/")}
+            (res) => { navigate("/") }
         )
-       
+
     }
     return (
-        <div className='mb-4'>
-            <header className='container'>
-                <div className="navbar  ">
-                    <div className="navbar-start">
-                        <div className="dropdown">
-                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M4 6h16M4 12h8m-8 6h16" />
-                                </svg>
-                            </div>
-                            <ul
-                                tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                                <Link to="/" className="btn">Home</Link>
-                                <Link to="/course" className="btn">Course</Link>
-
-                            </ul>
+        <div className=''>
+            <div className="navbar     text-[whitesmoke]">
+                <div className="navbar-start">
+                    <div className="dropdown">
+                        <div tabIndex={0} role="button" className="btn btn-ghost  md:hidden lg:hidden">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
                         </div>
-                        <Link to="/" className="btn btn-ghost text-xl">Bindu Theke Sindhu</Link>
-                    </div>
-                    <div className="navbar-center  hidden lg:flex">
-                        <ul className="menu menu-horizontal px-2">
-                            <Link to="/" className="btn btn-active btn-primary">Home</Link>&nbsp;&nbsp;
-                            <Link to="/course" className="btn btn-accent">Course</Link>
+                        <ul
+                            tabIndex={0}
+                            className="menu menu-sm dropdown-content bg-base-100 text-[darkcyan] text-3xl
+                             rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li> <Link to="/" className="">Home</Link> </li>
+                            <li><Link to="/course" className="">Course</Link></li>
+                            {
+                            user ? (<li> <span className='text-xs text-[indigo]' >{user.email}</span> <br />
+                                <Link onClick={handleSignout} className="text-[darkcyan] -mt-8     ">
+                                    Logout</Link> &nbsp;</li>
 
+                            )
+                                :
+                                (                      <li>
+                                        <Link to="/login" className="text-[darkcyan]      ">Login</Link> &nbsp;
+                                    </li>
+                                )
+
+                        }
+                            <li className='-mt-8'><Link to="/register"  >Register
+                            </Link></li>
 
                         </ul>
                     </div>
-                    {
-                        user ? (<div className="navbar-end   lg:flex px-3 ">
-                            <img src= {user.photoURL} alt="" />
-                            <span>{user.email}</span>
-
-                            <Link onClick={handleSignout} className="text-white w-24 font-bold btn btn-info"> Logout</Link> &nbsp;
-                            <Link to="/register" className="btn w-24 text-white font-bold btn-success">Register</Link>
-                        </div>) :
-
-                           (  <div className="navbar-end   lg:flex px-3 ">
-
-                                <Link to="/login" className="text-white w-24 font-bold btn btn-info">Login</Link> &nbsp;
-                                <Link to="/register" className="btn w-24 text-white font-bold btn-success">Register</Link>
-                            </div>
-                           )
-
-
-                    }
+                    <Link to="/" className="btn btn-ghost text-xs md:text-xs sm:text-xl lg:text-2xl ">
+                        <span className='text-[blanchedalmond] font-bold shadow-2xl text-xl'> <sub>Bindu</sub> </span> Theke
+                        <span className='text-[aliceblue] font-bold shadow-2xl text-xl'> <sup>Sindhu</sup>  </span></Link>
                 </div>
-            </header>
+                <div className="navbar-center hidden lg:flex md:flex">
+                    <ul className="menu menu-horizontal px-1">
+                        <Link to="/" className="btn btn-active btn-primary">Home</Link>&nbsp;&nbsp;
+                        <Link to="/course" className="btn btn-accent">Course</Link> &nbsp;&nbsp;
+
+                        &nbsp;&nbsp;
+                        {
+                            user ? (<div> <span >{user.email}</span> &nbsp;
+                                <Link onClick={handleSignout} className="text-white w-24 font-bold btn btn-info">
+                                    Logout</Link> &nbsp;</div>
+
+                            )
+                                :
+                                (
+                                    <div>
+                                        <Link to="/login" className="text-white w-24 font-bold btn btn-info">Login</Link> &nbsp;
+                                    </div>
+                                )
+
+                        }
+
+                        <Link to="/register" className="btn w-24 text-white font-bold btn-success">Register
+                        </Link>
+
+
+                    </ul>
+                </div>
+
+            </div>
         </div>
     )
 }

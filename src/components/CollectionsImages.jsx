@@ -8,8 +8,8 @@ import a6 from '../assets/a6.avif'
 
 const CollectionsImages = () => {
   return (
-    <div className='mt-6 gap-3 items-center justify-center grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2'>
-          <div className=" relative card bg-base-100 w-96 shadow-xl min-h-[540px]">
+    <div className='  mt-6 gap-8 bg-[white] items-center justify-center grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2'>
+          <div className="mx-auto mt-2 mb-2 relative card bg-base-300 w-72 sm:w-96 md:w-96 lg:w-96 shadow-xl min-h-[540px]">
               <figure>
                   <img
                       src={a1}
@@ -25,7 +25,7 @@ const CollectionsImages = () => {
               </div>
           </div>
 
-          <div className="relative card bg-base-100 w-96 shadow-xl min-h-[540px]">
+           <div className="mx-auto mt-2 mb-2 relative card bg-base-300 w-72 sm:w-96 md:w-96 lg:w-96 shadow-xl min-h-[540px]">
               <figure>
                   <img
                       src={a2}
@@ -42,7 +42,7 @@ const CollectionsImages = () => {
           </div>
 
 
-          <div className="relative card bg-base-100 w-96 shadow-xl min-h-[540px]">
+           <div className="mx-auto mt-2 mb-2 relative card bg-base-300 w-72 sm:w-96 md:w-96 lg:w-96 shadow-xl min-h-[540px]">
               <figure>
                   <img
                       src={a3}
@@ -59,7 +59,7 @@ const CollectionsImages = () => {
               </div>
           </div>
 
-          <div className=" relative card bg-base-100 w-96 shadow-xl min-h-[540px]">
+          <div className="mx-auto mt-2 mb-2 relative card bg-base-300 w-72 sm:w-96 md:w-96 lg:w-96 shadow-xl min-h-[540px]">
               <figure>
                   <img
                       src={a4}
@@ -78,7 +78,7 @@ const CollectionsImages = () => {
 
 
 
-          <div className=" relative card bg-base-100 w-96 shadow-xl min-h-[540px]">
+          <div className="mx-auto mt-2 mb-2 relative card bg-base-300 w-72 sm:w-96 md:w-96 lg:w-96 shadow-xl min-h-[540px]">
               <figure>
                   <img
                       src={a5}
@@ -97,7 +97,7 @@ const CollectionsImages = () => {
 
 
 
-          <div className="relative card bg-base-100 w-96 shadow-xl min-h-[540px]">
+           <div className="mx-auto mt-2 mb-2 relative card bg-base-300 w-72 sm:w-96 md:w-96 lg:w-96 shadow-xl min-h-[540px]">
               <figure>
                   <img
                       src={a6}

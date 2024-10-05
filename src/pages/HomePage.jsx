@@ -10,9 +10,9 @@ const HomePage = () => {
     <div className='mt-4'>
       <Banner/>
       <HowWorksSection/>  
-      <CollectionsImages/>  
-      <ContactUsSection/> 
-      <AboutUsSection/> 
+       <CollectionsImages/>  
+      {/*<ContactUsSection/> 
+      <AboutUsSection/>  */}
     </div>
   )
 }

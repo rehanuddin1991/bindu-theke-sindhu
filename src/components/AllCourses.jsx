@@ -17,7 +17,8 @@ const AllCourses = () => {
     
         
   return  ( 
-    <div className='mt-4 grid grid-cols-1 gap-4 justify-evenly items-center  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mx-auto'> 
+    <div className='  mt-4 grid grid-cols-1 gap-4 justify-center items-center 
+     sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 mx-auto'> 
       {
         courses.map((item,index)=>{
           return <SingleCourseComponents  key={item.course_id} props={item}></SingleCourseComponents>
