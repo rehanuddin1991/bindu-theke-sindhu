@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import { authContext } from '../Provider/AuthProvider'
-import { Navigate } from 'react-router-dom'
+import {  Link, useNavigate } from 'react-router-dom'
 const LoginPage = () => {
-  const {signInWithGoogle,signIn, setUser}=useContext(authContext)
-
+  const {signInWithGoogle,signIn,signInWithFacebook,signInWithGithub, setUser}=useContext(authContext)
+  const navigate=useNavigate()
   const handleNormalSignIn = (event) => {
 
     const form=new FormData(event.currentTarget);
@@ -13,7 +13,9 @@ const LoginPage = () => {
     
    //console.log(email)
    signIn(email, password)
-   .then((res) => {console.log("success")})
+   .then((res) => { 
+    navigate('/')
+   })
    .catch((err) => {console.error(err)})
     
 
@@ -23,7 +25,36 @@ const LoginPage = () => {
     
     signInWithGoogle().then((res) => {
       //console.log(res.user)
-      setUser(res.user)
+       
+      if(res.user)
+      {
+        navigate("/")
+      }
+      
+    })
+    .catch((err)=> {console.error(err)})
+  }
+
+  const handleFacebookSignIn = () => {
+    
+    signInWithFacebook().then((res) => {
+      //console.log(res.user)
+      
+      if(res.user)
+      {
+        navigate("/")
+      }
+      
+    })
+    .catch((err)=> {console.error(err)})
+  }
+
+
+  const handleGithubSignIn = () => {
+    
+    signInWithGithub().then((res) => {
+      //console.log(res.user)
+       
       if(res.user)
       {
         Navigate("/")
@@ -59,7 +90,9 @@ const LoginPage = () => {
            
           <input type="submit" value="Login"   className="btn btn-primary" /> 
           <button onClick={handleGoogleSignIn} className="btn btn-primary">Login with Google</button>
-          <button className="btn btn-primary">Login</button>
+          <button onClick={handleFacebookSignIn} className="btn btn-primary">Login with Facebook</button>
+          <button onClick={handleGithubSignIn} className="btn btn-primary">Login with Github</button>
+           
         </div>
       </form>
     </div>

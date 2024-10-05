@@ -1,14 +1,16 @@
 import React, { useContext } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { authContext } from '../../Provider/AuthProvider'
  
 
 
 const Navbar = () => {
+    const navigate=useNavigate()
     const { user,setUser, mySignOut } = useContext(authContext)
     const handleSignout = () => {
+         
         mySignOut().then(
-            (res)=> { console.log(res ) ;setUser(null);   Navigate("/login")}
+            (res)=> {      navigate("/")}
         )
        
     }
@@ -52,8 +54,10 @@ const Navbar = () => {
                     </div>
                     {
                         user ? (<div className="navbar-end   lg:flex px-3 ">
+                            <img src= {user.photoURL} alt="" />
+                            <span>{user.email}</span>
 
-                            <Link onClick={handleSignout} className="text-white w-24 font-bold btn btn-info">{user.email} Logout</Link> &nbsp;
+                            <Link onClick={handleSignout} className="text-white w-24 font-bold btn btn-info"> Logout</Link> &nbsp;
                             <Link to="/register" className="btn w-24 text-white font-bold btn-success">Register</Link>
                         </div>) :
 
