@@ -42,7 +42,7 @@ const RegisterPage = () => {
       <div className="hero bg-white   ">
         <div className="   hero-content flex-col lg:flex-row-reverse">
            
-          <div className="card bg-base-100 text-[green] text-2xl w-full   shrink-0 shadow-2xl">
+          <div className="card bg-base-100 text-[green] text-2xl  w-[16rem] md:w-[400px] sm:w-[400px] lg:w-[500px]   shrink-0 shadow-2xl">
             <form className="card-body" onSubmit={handleRegister}>
             <div className="form-control">
                 <label className="label">

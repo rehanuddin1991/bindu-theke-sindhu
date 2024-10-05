@@ -25,7 +25,7 @@ const CourseDetailsPage = () => {
 
   return (
     <div>
-      <div className="card bg-base-100 w-full shadow-xl text-xl mb-2">
+      <div className="card bg-base-100 w-full shadow-xl text-xl  ">
         <figure>
           <img
             src={courses?.img_url}
@@ -48,7 +48,7 @@ const CourseDetailsPage = () => {
           </div>
         </div>
       </div>
-
+ 
        </div>
   )
 }

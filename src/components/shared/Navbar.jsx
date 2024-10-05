@@ -40,7 +40,7 @@ const Navbar = () => {
                             <li> <Link to="/" className="">Home</Link> </li>
                             <li><Link to="/course" className="">Course</Link></li>
                             {
-                            user ? (<li> <span className='text-xs text-[indigo]' >{user.email}</span> <br />
+                            user ? (<li> <span className='text-xs text-[indigo]' >{user.displayName?user.displayName : user.email}</span> <br />
                                 <Link onClick={handleSignout} className="text-[darkcyan] -mt-8     ">
                                     Logout</Link> &nbsp;</li>
 
@@ -68,7 +68,7 @@ const Navbar = () => {
 
                         &nbsp;&nbsp;
                         {
-                            user ? (<div> <span >{user.email}</span> &nbsp;
+                            user ? (<div> <span >{user.displayName?user.displayName : user.email}</span> &nbsp;
                                 <Link onClick={handleSignout} className="text-white w-24 font-bold btn btn-info">
                                     Logout</Link> &nbsp;</div>
 
