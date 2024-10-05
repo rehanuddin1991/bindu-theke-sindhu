@@ -5,10 +5,12 @@ import { authContext } from '../../Provider/AuthProvider'
 
 
 const Navbar = () => {
-    const { user, mySignOut } = useContext(authContext)
+    const { user,setUser, mySignOut } = useContext(authContext)
     const handleSignout = () => {
-        mySignOut()
-        Navigate("/login")
+        mySignOut().then(
+            (res)=> { console.log(res ) ;setUser(null);   Navigate("/login")}
+        )
+       
     }
     return (
         <div>
