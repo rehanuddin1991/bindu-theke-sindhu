@@ -88,9 +88,9 @@ const LoginPage = () => {
         </div>
         <div className="form-control mt-6">
            
-          <input type="submit" value="Login"   className="btn btn-primary" /> 
-          <button onClick={handleGoogleSignIn} className="btn btn-primary">Login with Google</button>
-          <button onClick={handleFacebookSignIn} className="btn btn-primary">Login with Facebook</button>
+          <input type="submit" value="Login"   className="btn btn-primary" /> <br />
+          <button onClick={handleGoogleSignIn} className="btn btn-info">Login with Google</button> <br />
+          <button onClick={handleFacebookSignIn} className="btn btn-success">Login with Facebook</button> <br />
           <button onClick={handleGithubSignIn} className="btn btn-primary">Login with Github</button>
            
         </div>
