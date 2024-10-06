@@ -6,7 +6,7 @@ const SingleCourseComponents = ({ props }) => {
     return (
          
             <div className="relative mt-2 mb-2 sm:min-h-[624px] md:min-h-[624px] lg:min-h-[624px] card bg-neutral text-neutral-content 
-            w-64 md:w-80 lg:w-80 sm:w-80 ">
+            w-64 md:w-80 lg:w-80 sm:w-80 mx-auto ">
 
                 <figure className="px-1 pt-1">
                     <img
