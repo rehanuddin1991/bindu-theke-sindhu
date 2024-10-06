@@ -67,7 +67,8 @@ const RegisterPage = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" name="password" placeholder="password" required className="input input-bordered input-info w-full max-w-xs"  />
+                <input type="password" name="password" placeholder="password" required className="input input-bordered
+                 input-info w-full max-w-xs"  />
                  
               </div>
 

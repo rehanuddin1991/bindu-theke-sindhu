@@ -68,7 +68,9 @@ const Navbar = () => {
 
                         &nbsp;&nbsp;
                         {
-                            user ? (<div> <span >{user.displayName?user.displayName : user.email}</span> &nbsp;
+                            
+                            user ? (<div> <span >
+                                  {user.displayName?user.displayName : user.email}</span> &nbsp;
                                 <Link onClick={handleSignout} className="text-white w-24 font-bold btn btn-info">
                                     Logout</Link> &nbsp;</div>
 
