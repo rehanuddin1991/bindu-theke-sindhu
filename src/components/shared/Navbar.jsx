@@ -1,10 +1,18 @@
 import React, { useContext } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { authContext } from '../../Provider/AuthProvider'
 
 
 
 const Navbar = () => {
+    const navLinkCSS=({isActive})=>
+    {
+        return {
+            fontWeight:isActive? "bold": "normal",
+            color:isActive? "red": "white",
+            
+        }
+    }
     const navigate = useNavigate()
     const { user, setUser, mySignOut } = useContext(authContext)
     const handleSignout = () => {
@@ -62,9 +70,9 @@ const Navbar = () => {
                         <span className='text-[aliceblue] font-bold shadow-2xl text-xl'> <sup>Sindhu</sup>  </span></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex md:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        <Link to="/" className="btn btn-active btn-primary">Home</Link>&nbsp;&nbsp;
-                        <Link to="/course" className="btn btn-accent">Course</Link> &nbsp;&nbsp;
+                    <nav className="menu menu-horizontal px-1">
+                        <NavLink   to="/" className="btn   btn-primary">Home</NavLink>&nbsp;&nbsp;
+                        <NavLink   to="/course" className="btn   btn-accent">Course</NavLink> &nbsp;&nbsp;
 
                         &nbsp;&nbsp;
                         {
@@ -87,8 +95,10 @@ const Navbar = () => {
                         <Link to="/register" className="btn w-24 text-white font-bold btn-success">Register
                         </Link>
 
+                         
 
-                    </ul>
+
+                    </nav>
                 </div>
 
             </div>

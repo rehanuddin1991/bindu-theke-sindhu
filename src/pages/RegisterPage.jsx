@@ -72,16 +72,16 @@ const RegisterPage = () => {
                  
               </div>
 
-              <div className="form-control mt-6">
-                <input className="btn btn-primary" type="submit" value="Register" />
+              <div className="form-control mt-4 ml-7 md:ml-20"> 
+                <input className="btn btn-primary w-24 lg:w-40 sm:w-24 md:w-32" type="submit" value="Register" />
                
               </div>
 
-              <div className="form-control">
+              <div className="form-control ">
                 <label className="label">
-                  <span className="label-text">Already have an account?</span>
+                  <span className="label-text text-center md:ml-20 lg:ml-20">Already have an account?</span>
                 </label>
-               <Link to="/login"> <button   className="btn btn-info">Login</button>
+               <Link to="/login"> <button   className="btn btn-info w-24 lg:w-40 sm:w-24 md:w-32 lg:-ml-20">Login</button>
                </Link>
                  
               </div>

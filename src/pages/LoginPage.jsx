@@ -87,7 +87,7 @@ const LoginPage = () => {
               </div>
               <div className="form-control mt-6">
 
-                <input type="submit" value="Login" className="btn btn-primary" /> <br />
+                <input type="submit" value="Login" className="text-[whitesmoke] bg-[darkcyan] font-bold w-32 md:ml-24 btn btn-primary" /> <br />
 
 
               </div>
