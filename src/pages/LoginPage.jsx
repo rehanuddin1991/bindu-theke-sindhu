@@ -16,7 +16,7 @@ const LoginPage = () => {
     signIn(email, password)
       .then((res) => {
         console.log(res)
-        navigate('/');
+        navigate('/course');
       })
       .catch((err) => { console.error(err) })
 
@@ -29,7 +29,7 @@ const LoginPage = () => {
       //console.log(res.user)
 
       if (res.user) {
-        navigate("/")
+        navigate("/course")
       }
 
     })
@@ -42,7 +42,7 @@ const LoginPage = () => {
       //console.log(res.user)
 
       if (res.user) {
-        navigate("/")
+        navigate("/course")
       }
 
     })
@@ -56,7 +56,7 @@ const LoginPage = () => {
       //console.log(res.user)
 
       if (res.user) {
-        Navigate("/")
+        Navigate("/course")
       }
 
     })

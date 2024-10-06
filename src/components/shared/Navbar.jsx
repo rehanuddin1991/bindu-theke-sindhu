@@ -23,7 +23,7 @@ const Navbar = () => {
 
     }
     return (
-        <div className=''>
+        <div >
             <div className="navbar     text-[whitesmoke]">
                 <div className="navbar-start">
                     <div className="dropdown">

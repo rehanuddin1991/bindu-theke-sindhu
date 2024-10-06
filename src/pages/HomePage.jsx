@@ -7,12 +7,12 @@ import AboutUsSection from '../components/AboutUsSection'
 
 const HomePage = () => {
   return (
-    <div className='mt-4'>
+    <div className='' >
       <Banner/>
       <HowWorksSection/>  
        <CollectionsImages/>  
-      {/*<ContactUsSection/> 
-      <AboutUsSection/>  */}
+      <ContactUsSection/> 
+      <AboutUsSection/> 
     </div>
   )
 }

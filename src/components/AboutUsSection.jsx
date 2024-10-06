@@ -3,18 +3,19 @@ import rehan from '../assets/rehan.jpg'
 const AboutUsSection = () => {
   return (
     <div>
-        <div className="hero bg-[indigo]">
-  <div className="hero-content flex-col lg:flex-row-reverse items-start justify-between">
-    <img  
+      <div className="hero bg-[whitesmoke]  ">
+  <div className="hero-content bg-white flex-col lg:flex-row md:flex-row">
+    <img
       src={rehan}
-      className="max-w-sm lg:ml-20 rounded-lg shadow-2xl" />
-    <div className='space-y-5 text-left'>
-      <h1 className="text-4xl font-bold ">Managing Director</h1>
-      <h1 className="text-3xl font-bold ">Mr. Rehan Uddin</h1>
-      <h1 className="text-2xl font-bold ">Computer Engineer</h1>
-      
-      
-      <button className="btn btn-primary"> &nbsp;&nbsp;&nbsp;&nbsp; Let's Contact</button>
+      className="max-w-52 lg:max-w-sm md:max-w-sm rounded-lg shadow-2xl" />
+    <div className='text-[indigo]'>
+    <h1 className="text-xl font-bold ">Managing Director</h1>
+      <h1 className="text-2xl font-bold text-[orange] ">Mr. Rehan Uddin</h1>
+      <h1 className="text-xl font-bold ">Computer Engineer</h1>
+      <p className="py-6 text-[darkcyan] text-xl">
+        I am an optimistic person and also a good planer. I have vast experience at IT industry. I want to share my knowledge and experience with you
+      </p>
+      <button className="btn btn-info ">Let's Connect</button>
     </div>
   </div>
 </div>
