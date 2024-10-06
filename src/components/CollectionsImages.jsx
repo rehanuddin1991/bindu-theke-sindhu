@@ -20,7 +20,7 @@ const CollectionsImages = () => {
                   </h2>
                    
                   <div className="card-actions justify-end">
-                      <button className=" absolute bottom-10 right-10 btn btn-primary">Details</button>
+                      <button className=" absolute bottom-3 right-3 btn btn-primary">Details</button>
                   </div>
               </div>
           </div>
@@ -37,7 +37,7 @@ const CollectionsImages = () => {
                   </h2>
                    
                   <div className="card-actions justify-end">
-                      <button className="btn btn-primary absolute bottom-10 right-10">Details</button>
+                      <button className="btn btn-primary absolute bottom-3 right-3">Details</button>
                   </div>
               </div>
           </div>
@@ -54,7 +54,7 @@ const CollectionsImages = () => {
                   Certified Course on Master of Python for Future Professionals (A-Z)(1st batch)
                   </h2>
                    
-                  <div className="absolute bottom-10 right-10 card-actions justify-end">
+                  <div className="absolute bottom-3 right-3 card-actions justify-end">
                       <button className="btn btn-primary">Details</button>
                   </div>
               </div>
@@ -71,7 +71,7 @@ const CollectionsImages = () => {
                   </h2>
                    
                   <div className="card-actions justify-end">
-                      <button className="btn btn-primary absolute bottom-10 right-10">Details</button>
+                      <button className="btn btn-primary absolute bottom-3 right-3">Details</button>
                   </div>
               </div>
           </div>
@@ -90,7 +90,7 @@ const CollectionsImages = () => {
                   </h2>
                    
                   <div className="card-actions justify-end">
-                      <button className="btn btn-primary absolute bottom-10 right-10">Details</button>
+                      <button className="btn btn-primary absolute bottom-3 right-3">Details</button>
                   </div>
               </div>
           </div>
@@ -109,7 +109,7 @@ const CollectionsImages = () => {
                   </h2>
                    
                   <div className="card-actions justify-end">
-                      <button className="btn btn-primary absolute bottom-10 right-10">Details</button>
+                      <button className="btn btn-primary absolute bottom-3 right-3">Details</button>
                   </div>
               </div>
           </div>
