@@ -1,9 +1,10 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { authContext } from '../Provider/AuthProvider'
 import toast from 'react-hot-toast'
 
 const RegisterPage = () => {
+  const [error,setError]=useState(null);
   const {createUser}=useContext(authContext)
   const navigate=useNavigate();
   const handleRegister= 
@@ -31,12 +32,12 @@ const RegisterPage = () => {
     event.target.name.value="";
     event.target.email.value="";
     event.target.password.value="";
-    navigate("/");
+    navigate("/course");
 
      
 
    })
-   .catch((err) => {toast.success("something wrong!! please try again");})
+   .catch((err) => {setError(err.message); toast.success("something wrong!! please try again");})
      
      
   }
@@ -74,6 +75,10 @@ const RegisterPage = () => {
 
               <div className="form-control mt-4 ml-7 md:ml-20"> 
                 <input className="btn btn-primary w-24 lg:w-40 sm:w-24 md:w-32" type="submit" value="Register" />
+                <br />
+                {
+                  error? error : ""
+                }
                
               </div>
 

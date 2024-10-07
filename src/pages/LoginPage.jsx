@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { authContext } from '../Provider/AuthProvider'
 import { Link, useNavigate } from 'react-router-dom'
 const LoginPage = () => {
+  const [error,setError]=useState(null);
   const { signInWithGoogle, signIn, signInWithFacebook, signInWithGithub, setUser } = useContext(authContext)
   const navigate = useNavigate()
   const handleNormalSignIn = (event) => {
@@ -18,7 +19,7 @@ const LoginPage = () => {
         console.log(res)
         navigate('/course');
       })
-      .catch((err) => { console.error(err) })
+      .catch((err) => { setError(err.message) })
 
 
   }
@@ -33,7 +34,7 @@ const LoginPage = () => {
       }
 
     })
-      .catch((err) => { console.error(err) })
+      .catch((err) => { setError(err.message) })
   }
 
   const handleFacebookSignIn = () => {
@@ -46,7 +47,7 @@ const LoginPage = () => {
       }
 
     })
-      .catch((err) => { console.error(err) })
+      .catch((err) => { setError(err.message) })
   }
 
 
@@ -60,7 +61,7 @@ const LoginPage = () => {
       }
 
     })
-      .catch((err) => { console.error(err) })
+      .catch((err) => { setError(err.message) })
   }
 
   return (
@@ -88,7 +89,10 @@ const LoginPage = () => {
               <div className="form-control mt-6">
 
                 <input type="submit" value="Login" className="text-[whitesmoke] bg-[darkcyan] font-bold w-32 md:ml-24 btn btn-primary" /> <br />
-
+                <br />
+                {
+                  error? error : ""
+                }
 
               </div>
             </form>

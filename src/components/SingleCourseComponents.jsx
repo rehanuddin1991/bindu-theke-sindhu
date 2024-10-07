@@ -15,8 +15,8 @@ const SingleCourseComponents = ({ props }) => {
                         className="rounded-xl " />
                 </figure>
                 <div className="card-body text-left  ">
-                    <h2 className=" card-title">{title }... </h2>
-                    <p className='text-[chartreuse]'>{details.slice(0,90)}..</p>
+                    <h2 className=" card-title">{title } </h2>
+                    <p className='text-[chartreuse]'>{details.slice(0,100)}..</p>
                     <h2 className="card-title">${price}</h2>
                     <div className="card-actions justify-end">
                        <Link to={ `/course/${course_id}`}>  <button className="btn absolute bottom-4 right-4">Details</button> </Link>
