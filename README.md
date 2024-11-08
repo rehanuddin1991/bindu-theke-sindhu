@@ -1,7 +1,7 @@
-backend server
-git: https://github.com/rehanuddin1991/backend_express_server.git
-live: https://bindu-backend.vercel.app/course
+assignment: bindu theke sindhu project <br/>
+git:https://github.com/rehanuddin1991/bindu-theke-sindhu.git<br/>
+live: https://bindu-theke-sindhu.netlify.app/<br/>
 
-assignment: bindu theke sindhu project
-git:https://github.com/rehanuddin1991/bindu-theke-sindhu.git
-live: https://bindu-theke-sindhu.netlify.app/
+backend server <br/>
+git: https://github.com/rehanuddin1991/backend_express_server.git<br/>
+live: https://bindu-backend.vercel.app/course<br/>
